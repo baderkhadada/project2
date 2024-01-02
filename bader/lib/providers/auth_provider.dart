@@ -2,8 +2,6 @@ import 'package:bader/models/user.dart';
 import 'package:bader/services/auth_service.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-// import 'package:todo_test_api/models/user.dart';
-// import 'package:todo_test_api/services/auth_service.dart';
 
 class AuthProvider extends ChangeNotifier {
   final authService = AuthService();
@@ -12,7 +10,6 @@ class AuthProvider extends ChangeNotifier {
   Future<String> signup({required User user}) async {
     token = await authService.signup(user: user);
 
-    /// token to be saved in local storage
     notifyListeners();
     return token;
   }
@@ -21,7 +18,6 @@ class AuthProvider extends ChangeNotifier {
     token = await authService.signin(user: user);
     saveTokenInStorage(token);
 
-    /// token to be saved in local storage
     notifyListeners();
     return token;
   }

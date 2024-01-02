@@ -2,9 +2,6 @@ import 'package:bader/models/token.dart';
 import 'package:bader/models/user.dart';
 import 'package:bader/services/client.dart';
 import 'package:dio/dio.dart';
-// import 'package:todo_test_api/models/token.dart';
-// import 'package:todo_test_api/models/user.dart';
-// import 'package:todo_test_api/services/client.dart';
 
 class AuthService {
   Future<String> signup({required User user}) async {
