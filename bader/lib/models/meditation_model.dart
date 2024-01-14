@@ -44,7 +44,6 @@ class Med {
     name = json['Name'];
     created = json['createdAt'];
     updated = json['updatedAt'];
-    // V = json['__v'];
     isComplete = json['isComplete'];
   }
 
@@ -54,7 +53,6 @@ class Med {
     _data['Name'] = name;
     _data['created'] = created;
     _data['updated'] = updated;
-    // _data['__v'] = V;
     _data['isComplete'] = isComplete;
     return _data;
   }
